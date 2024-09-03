@@ -1,13 +1,6 @@
 from django.contrib import admin
 from .models import Location, Worker, Tool, Job, ScheduledLocation
 
-class JobInline(admin.TabularInline):
-    model = Job
-    extra = 1
-
-class WorkerInline(admin.TabularInline):
-    model = Worker
-    extra = 1
 
 class ScheduledLocationAdmin(admin.ModelAdmin):
     list_display = ('location', 'date')
